@@ -78,6 +78,12 @@ const images = [
           </li>
   `).join('');
 
+  import SimpleLightbox from "simplelightbox";
+
+  import "simplelightbox/dist/simple-lightbox.min.css";
+
+new SimpleLightbox('.gallery a', {captionsData: "alt", captionDelay: 250})
+
   galleryConteiner.innerHTML = galleryMarkup;
 
   galleryConteiner.addEventListener('click', function (e) {e.preventDefault();
