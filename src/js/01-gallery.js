@@ -84,33 +84,4 @@ const images = [
 
 new SimpleLightbox('.gallery a', {captionsData: "alt", captionDelay: 250})
 
-  galleryConteiner.innerHTML = galleryMarkup;
-
-  galleryConteiner.addEventListener('click', function (e) {e.preventDefault();
-
-    const clickedImage = e.target.closest('.gallery-image');
-if (clickedImage) {
-  const largeImageSrc = clickedImage.getAttribute('data-source');
-
-if (largeImageSrc) {
-  const instance = basicLightbox.create(`
-  <div class="modal">
-    <img class="modal-image" src="${largeImageSrc}" alt="Large Image">
-  </div>`, {
-    onClose: () => {
-      window.removeEventListener('keydown', closeOnEscape);
-    }
-  });
-
-const closeOnEscape = (event) => {
-  if (event.key === 'Escape') {
-    instance.close();
-  }
-  };
-
-window.addEventListener('keydown', closeOnEscape);
-
-instance.show();
-}
-}
-});
+  
