@@ -84,5 +84,5 @@ const images = [
 
   galleryConteiner.innerHTML = galleryMarkup;
  
-  let gallery = new SimpleLightbox('.gallery a', {captionDelay: 250})
+  let gallery = new SimpleLightbox('.gallery a', {captionDelay: 250, captionData: "alt"});
   
