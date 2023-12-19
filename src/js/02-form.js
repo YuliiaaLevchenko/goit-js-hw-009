@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = feedbackForm.email.value.trim();
         const message = feedbackForm.message.value.trim();
         if (email && message) {
+            console.log({email, message});
             localStorage.removeItem('feedback-form-state');
             feedbackForm.reset();
           }
